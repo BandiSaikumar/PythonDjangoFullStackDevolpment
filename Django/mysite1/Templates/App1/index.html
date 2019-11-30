@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+    <head>
+    <meta charset = "utf-8">
+    <title> Django Page </title>
+<!--<link rel = "stylesheet" href = "{% static "css/style.css"%}"/>-->
+        <link rel='stylesheet' href="{% static 'css/mystyle.css' %}">
+<!--        <link href="static/css/mystyle.css" rel="stylesheet"/>-->
+    </head>
+
+    <body>
+    <h1> WELCOME TO DJANGO DEVOLPMENT DATA! </h1>
+    <h2> ACCESS RECORDS </h2>
+    <img src = "{% static 'images/djangologo.jpeg' %}" alt = "Uhhhooo, Didn't show!"/>
+<!--        {{ insert_me }}-->
+
+    <div class = "Django">
+        {% if access_records %}
+        <table>
+            <thead>
+                <th> SITE NAME </th>
+                <th> DATA ACCESSED </th>
+            </thead>
+            {% for acc in access_records %}
+            <tr>
+                <td>{{ acc.name }}</td>
+                <td> {{ acc.data }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <p> NO ACCESS RECORDS FOUND</p>
+        {% endif %}
+
+    </div>
+
+    </body>
+
+</html>
+
+
+<!--        <link rel="stylesheet"  href="{{ STATIC_URL }}css/style.css" />-->
+
+
+
