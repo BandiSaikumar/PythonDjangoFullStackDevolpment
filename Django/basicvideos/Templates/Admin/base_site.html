@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Admin Page </title>
+    </head>
+    <body>
+    <div class ="container">
+        {% block title %}
+        {{ title }}|{{site_title|default:_('Django site admin')}}
+        {% endblock %}
+
+        {% block branding %}
+        <h1 id="site_name"><a href ="{% url 'admin:index'%}"> VIDEO STORE ADMIN </a></h1>
+        {% endblock %}
+
+        {% block nav-global %}
+        {% endblock %}
+    </div>
+    </body>
+</html>
