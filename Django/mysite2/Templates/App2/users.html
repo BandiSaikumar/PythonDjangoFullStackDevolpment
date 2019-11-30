@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <tittle> UserPage </tittle>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    </head>
+
+    <body>
+    <div class = "container">
+    <h1> PLEASE SIGN UP HERE! </h1>
+        <form method = "POST">
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type = "submit" class = 'btn btn-primary' value = "Submit" >
+        </form>
+    </div>
+<!--    {% if users %}-->
+<!--    <ol>-->
+<!--        {% for person in users %}-->
+<!--        <li> UserInfo </li>-->
+<!--        <ul>-->
+<!--            <li> First_Name: {{ person.first_name }}</li>-->
+<!--            <li> Last_Name: {{ person.last_name }}</li>-->
+<!--            <li> Email : {{ person.email }}</li>-->
+<!--        </ul>-->
+<!--        {% endfor %}-->
+<!--    </ol>-->
+<!--    {% endif %}-->
+    </body>
+
+</html>
