@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SocialMediaApp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!--        Medium style editor-->
+        <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+
+          <!-- Custom fonts for this template -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="{% static 'mysite/css/master.css' %}">
+    </head>
+    <body>
+        <nav class="navbar-mynav" role="navigation" id="navbar">
+            <div class='container'>
+                <a class="navbar-brand mynav" href="{% url 'home' %}">Star Social Media</a>
+
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'posts:create' %}">Posts</a></li>
+                    <li><a href="{% url 'groups:all'%}">Groups</a></li>
+                    <li><a href="{% url 'groups:create'%}">Create Groups</a></li>
+                    <li><a href="{% url 'SocialMediaApp:logout' %}">LogOut</a></li>
+                    {% else %}
+                    <li><a href="{% url 'groups:all' %}">Groups</a></li>
+                    <li><a href="{% url 'SocialMediaApp:login'%}">Login</a></li>
+                    <li><a href="{% url 'SocialMediaApp:signup'%}">SignUp</a> </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        <div class='container mycontent'>
+           {% block content %}
+           {% endblock %}
+        </div>
+
+    </body>
+    <script type="text/javascript" src="{% static 'mysite/js/master.js' %}"></script>
+</html>
