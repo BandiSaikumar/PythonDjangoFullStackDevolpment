@@ -1,0 +1,49 @@
+/*Selected tag {
+    property : value;
+}*/
+h1{
+    background: #a8e6ff;
+}
+
+body{
+    background : #a8e6ff/* url(https://images.freecreatives.com/wp-content/uploads/2016/04/Download-Abstract-Color-Background.jpg);*/
+}
+p{
+    color : black;
+    text-decoration : line-through
+}
+li{
+    background : #4DA6FF;
+    border-color : black;
+    border-width : 10px solid;
+    border-style : double
+    /*a["href=www.npr.org"]*/
+}
+h2{
+    color : red;
+}
+input{
+    border:5px solid black;
+    width:600px
+    height:300px
+}
+#top{
+    width : 20%;
+    margin : auto;
+    text-align : center;
+    border : 4px solid black;
+}
+#middle{
+    border : 4px solid black;
+    width : 40%;
+    padding : 100px;
+    text-align : center;
+    margin : auto
+}
+#bottom {
+    border : 4px solid black;
+    width : 60%:
+    padding : 500px;
+    text-align :center;
+    margin:auto;
+}

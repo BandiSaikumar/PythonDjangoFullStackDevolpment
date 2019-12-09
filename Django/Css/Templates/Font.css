@@ -1,0 +1,11 @@
+h1{
+    font-family:"Arial";
+    text-align:center
+}
+body{
+    font-size:20px;
+}
+p{
+    font-style:"italic";
+    font-weight:bold;
+}

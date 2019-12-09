@@ -1,0 +1,8 @@
+{% extends 'BlogApp/base.html' %}
+{% block content %}
+<form class="post">
+    {% csrf_token %}
+    <p> Are You Sure That You Want To Delete Perminently {{ object }}?</p>
+    <input type="submit" class="btn btn-danger" value="Confirm">
+</form>
+{% endblock %}
